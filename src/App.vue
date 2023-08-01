@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 var fun = () => {
-  console.log(123);
+  console.log('123')
 }
 </script>
 <style scoped lang="scss">
