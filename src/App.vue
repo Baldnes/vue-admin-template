@@ -14,7 +14,7 @@ var fun =
 <style scoped lang="scss">
 .box {
   width: 200px;
-  height: 220px;
+  height: 210px;
   background: #888888;
   h1{width: 100px;}
 }
