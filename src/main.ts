@@ -8,7 +8,7 @@ import App from '@/App.vue'
 const app = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
-    locale: zhCn,
+  locale: zhCn,
 })
 console.log(import.meta.env)
 app.mount('#app')
