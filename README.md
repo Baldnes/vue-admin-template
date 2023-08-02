@@ -1,5 +1,9 @@
 #安装依赖
-`pnpm install`
+
+```
+pnpm install
+```
+
 
 #运行项目
 
