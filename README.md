@@ -4,25 +4,23 @@
 git clone https://gitee.com/wang_-chunyang/vue-admin-template.git
 ```
 
-
 #安装依赖
 
 ```
 pnpm install
 ```
 
-
 #运行项目
 
 ```
 pnpm run dev
 ```
+
 #打包项目
 
 ```
 pnpm run build
 ```
-
 
 # Vue 3 + TypeScript + Vite
 
