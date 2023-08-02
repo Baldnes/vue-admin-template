@@ -1,3 +1,10 @@
+#克隆项目
+
+```
+git clone https://gitee.com/wang_-chunyang/vue-admin-template.git
+```
+
+
 #安装依赖
 
 ```
