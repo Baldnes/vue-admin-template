@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <el-button type="primary">123</el-button>
-<!--    <el-button type="success" :icon="Check" circle />-->
+    <!--    <el-button type="success" :icon="Check" circle />-->
     <div class="demo-pagination-block">
       <div class="demonstration">Total item count</div>
       <el-pagination :page-size="100" :total="1000" />
