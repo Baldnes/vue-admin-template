@@ -9,10 +9,12 @@ import 'virtual:svg-icons-register'
 //自定义插件
 import gloablComponent from './components/index'
 import '@/styles/index.scss'
-const app = createApp(App)
+import router from '@/router/index.ts'
+const app: App<Element> = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
   locale: zhCn,
 })
 app.use(gloablComponent)
+app.use(router)
 app.mount('#app')
