@@ -1,3 +1,4 @@
+
 export const constantRoute = [
   {
     path: '/login',
@@ -13,7 +14,7 @@ export const constantRoute = [
   },
   {
     path: '/404',
-    // @ts-ignore
+// @ts-ignore
     component: () => import('@/views/404/index.vue'),
   },
   {

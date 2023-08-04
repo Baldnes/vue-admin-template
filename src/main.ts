@@ -10,7 +10,7 @@ import 'virtual:svg-icons-register'
 import gloablComponent from './components/index'
 import '@/styles/index.scss'
 import router from '@/router/index.ts'
-const app: App<Element> = createApp(App)
+const app = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
   locale: zhCn,
