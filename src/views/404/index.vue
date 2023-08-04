@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import router from "@/router";
-const send = ()=>{
+import router from '@/router'
+const send = () => {
   router.push({
-    path:"/"
+    path: '/',
   })
 }
 </script>
@@ -11,7 +11,7 @@ const send = ()=>{
   <div class="box">
     <div class="design">
       <div class="img">
-        <img src="@/assets/image/404.png" alt="">
+        <img src="@/assets/image/404.png" alt="" />
       </div>
       <div class="title">
         <h1>404</h1>
@@ -46,7 +46,7 @@ const send = ()=>{
     }
     .title {
       margin-left: 20px;
-      display:flex;
+      display: flex;
       flex-direction: column;
     }
   }
