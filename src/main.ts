@@ -10,6 +10,7 @@ import 'virtual:svg-icons-register'
 import gloablComponent from './components/index'
 import '@/styles/index.scss'
 import router from '@/router/index.ts'
+import pinia from './store'
 const app = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
@@ -17,4 +18,5 @@ app.use(ElementPlus, {
 })
 app.use(gloablComponent)
 app.use(router)
+app.use(pinia)
 app.mount('#app')

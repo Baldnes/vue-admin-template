@@ -4,7 +4,7 @@ import type {
   loginForm,
   loginResponseData,
   userResponseData,
-} from '@/assets/api/user/type.ts'
+} from '@/api/user/type.ts'
 
 enum API {
   LOGIN_URL = '/user/login',
