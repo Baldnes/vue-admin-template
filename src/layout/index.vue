@@ -5,18 +5,30 @@
       <logo></logo>
       <el-scrollbar class="scrollbar">
         <!--菜单-->
-        <el-menu text-color="white" :collapse="LayOutSettingStore.fold?true:false" background-color="#7ac5d8" active-text-color="yellow" :default-active="$route.path">
+        <el-menu
+          text-color="white"
+          :collapse="LayOutSettingStore.fold ? true : false"
+          background-color="#7ac5d8"
+          active-text-color="yellow"
+          :default-active="$route.path"
+        >
           <Menu :menuList="userStore.menuRoutes"></Menu>
         </el-menu>
       </el-scrollbar>
     </div>
     <!--顶部导航-->
-    <div class="layout_tabber" :class="{fold:LayOutSettingStore.fold?true:false}">
+    <div
+      class="layout_tabber"
+      :class="{ fold: LayOutSettingStore.fold ? true : false }"
+    >
       <tabber></tabber>
     </div>
     <!--内容展示-->
-    <div class="layout_main" :class="{fold:LayOutSettingStore.fold?true:false}">
-      <Main/>
+    <div
+      class="layout_main"
+      :class="{ fold: LayOutSettingStore.fold ? true : false }"
+    >
+      <Main />
     </div>
   </div>
 </template>
@@ -24,9 +36,9 @@
 import useLayOutSettingStore from '@/store/modules/setting.ts'
 import logo from './logo/index.vue'
 import Menu from './menu/index.vue'
-import useUserStore from "@/store/modules/user.ts";
+import useUserStore from '@/store/modules/user.ts'
 import Main from './main/index.vue'
-import {useRoute} from "vue-router";
+import { useRoute } from 'vue-router'
 import tabber from './tabber/index.vue'
 let userStore = useUserStore()
 let $route = useRoute()
@@ -41,13 +53,20 @@ let LayOutSettingStore = useLayOutSettingStore()
   .layout_clider {
     width: $base-menu-width;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #7ac5d8 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-image: linear-gradient(
+      to bottom,
+      #7ac5d8 0%,
+      #bbc1bf 19%,
+      #57c6e1 42%,
+      #b49fda 79%,
+      #7ac5d8 100%
+    );
     transition: all 0.3s;
     .scrollbar {
       width: 100%;
       height: calc(100vh - $base-menu-logo-height);
       .el-menu {
-        border-right:none;
+        border-right: none;
       }
     }
   }

@@ -1,17 +1,17 @@
 <template>
   <div class="tabber">
     <div class="tabber_left">
-      <breadcrumb/>
+      <breadcrumb />
     </div>
     <div class="tabber_right">
-      <setting/>
+      <setting />
     </div>
-</div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import breadcrumb from './breadcrumb/index.vue'
-import setting from "./setting/index.vue";
+import setting from './setting/index.vue'
 </script>
 
 <style scoped lang="scss">

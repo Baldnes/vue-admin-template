@@ -1,11 +1,11 @@
 <template>
   <div class="logo" v-if="setting.logoHidden">
-    <img :src="setting.logo" alt="">
-    <p>{{setting.title}}</p>
+    <img :src="setting.logo" alt="" />
+    <p>{{ setting.title }}</p>
   </div>
 </template>
 <script setup lang="ts">
-import setting from "@/setting.ts";
+import setting from '@/setting.ts'
 </script>
 <style scoped lang="scss">
 .logo {

@@ -113,12 +113,8 @@ const validatorPassword = (rule: any, value: any, callback: any) => {
 
 //定义表单校验需要配置对象
 const rules = {
-  username: [
-    { trigger: 'change', validator: validatorUserName },
-  ],
-  password: [
-    { trigger: 'change', validator: validatorPassword },
-  ],
+  username: [{ trigger: 'change', validator: validatorUserName }],
+  password: [{ trigger: 'change', validator: validatorPassword }],
 }
 </script>
 <style scoped lang="scss">
