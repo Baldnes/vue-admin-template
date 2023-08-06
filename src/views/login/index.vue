@@ -114,11 +114,9 @@ const validatorPassword = (rule: any, value: any, callback: any) => {
 //定义表单校验需要配置对象
 const rules = {
   username: [
-    // { required: true, min: 6, max: 10, message: '账号长度至少六位', trigger: 'change' }
     { trigger: 'change', validator: validatorUserName },
   ],
   password: [
-    // { required: true, min: 6, max: 15, message: '密码长度至少6位', trigger: 'change' }
     { trigger: 'change', validator: validatorPassword },
   ],
 }

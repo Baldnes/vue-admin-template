@@ -11,11 +11,13 @@ import gloablComponent from './components/index'
 import '@/styles/index.scss'
 import router from '@/router/index.ts'
 import pinia from './store'
+import './permisstion'
 const app = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
   locale: zhCn,
 })
+
 app.use(gloablComponent)
 app.use(router)
 app.use(pinia)
