@@ -4,7 +4,9 @@
     <el-button type="success" size="default" icon="Plus" @click="addTrademark">
       添加品牌
     </el-button>
-    <span style="color: #8c939d;font-size: 10px;margin-left: 10px">注：商品id为27前（包括27）设置了不能进行更改操作，请使用后面的商品进行操作设置</span>
+    <span style="color: #8c939d; font-size: 10px; margin-left: 10px">
+      注：商品id为27前（包括27）设置了不能进行更改操作，请使用后面的商品进行操作设置
+    </span>
     <!--    表格-->
     <el-table style="margin: 10px 0" border :data="trademarkArr">
       <el-table-column
