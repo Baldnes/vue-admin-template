@@ -95,7 +95,7 @@ const login = async () => {
   }
 }
 //自定义校验规则
- // @ts-ignore
+// @ts-ignore
 const validatorUserName = (rule: any, value: any, callback: any) => {
   if (/^[a-zA-Z0-9]{5,10}$/.test(value)) {
     callback()

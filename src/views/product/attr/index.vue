@@ -138,13 +138,7 @@
 <script setup lang="ts">
 import category from '@/components/Category/index.vue'
 import useCategoryStore from '@/store/modules/category.ts'
-import {
-  nextTick,
-  onBeforeUnmount,
-  reactive,
-  ref,
-  watch,
-} from 'vue'
+import { nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { reqAttr, reqAddOrUpdateAttr, reqRemoveAttr } from '@/api/product/attr'
 import {
   AttrResponseData,

@@ -207,9 +207,7 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
     return false
   }
 }
-const handleAvatarSuccess: UploadProps['onSuccess'] = (
-  response
-) => {
+const handleAvatarSuccess: UploadProps['onSuccess'] = (response) => {
   trademarkParmas.logoUrl = response.data
   formRef.value.clearValidate('logoUrl')
 }
