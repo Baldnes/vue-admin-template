@@ -30,7 +30,7 @@
   <el-dropdown>
     <span class="el-dropdown-link">
       <span>{{ userStore.username }}</span>
-      <el-icon class="el-icon--right" style="position: relative;top: 2px;">
+      <el-icon class="el-icon--right" style="position: relative; top: 2px">
         <arrow-down />
       </el-icon>
     </span>

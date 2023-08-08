@@ -1,6 +1,6 @@
 //用户小仓库
 import { defineStore } from 'pinia'
-import { reqLogin, reqUserInfo,reqLogout } from '@/api/user'
+import { reqLogin, reqUserInfo, reqLogout } from '@/api/user'
 import type { UserStore } from './types/types.ts'
 import { SET_TOKEN, GET_TOKEN, REMOVE_TOKEN } from '@/utils/token.ts'
 import { constantRoute } from '@/router/routes.ts'
@@ -39,7 +39,7 @@ let useUserStore = defineStore('user', {
     },
     //获取用户信息
     async userInfo() {
-      let result:userInfoReponseData = await reqUserInfo()
+      let result: userInfoReponseData = await reqUserInfo()
       //获取到用户信息进行储存
       // @ts-ignore
       if (result.code == 200) {
@@ -54,13 +54,13 @@ let useUserStore = defineStore('user', {
     },
     //退出
     async userLogout() {
-      let result:any =  await reqLogout()
-      if(result.code == 200) {
-        this.token = '';
-        this.avatar = "";
-        this.username = "";
-        REMOVE_TOKEN();
-        return 'ok';
+      let result: any = await reqLogout()
+      if (result.code == 200) {
+        this.token = ''
+        this.avatar = ''
+        this.username = ''
+        REMOVE_TOKEN()
+        return 'ok'
       } else {
         return Promise.reject(new Error(result.message))
       }
