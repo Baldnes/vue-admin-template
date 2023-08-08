@@ -8,7 +8,7 @@
           :disabled="scene == 0 ? false : true"
         >
           <el-option
-            v-for="(c1, index) in categoryStore.c1Arr"
+            v-for="c1 in categoryStore.c1Arr"
             :key="c1.id"
             :label="c1.name"
             :value="c1.id"
@@ -22,7 +22,7 @@
           :disabled="scene == 0 ? false : true"
         >
           <el-option
-            v-for="(c2, index) in categoryStore.c2Arr"
+            v-for="c2 in categoryStore.c2Arr"
             :key="c2.id"
             :label="c2.name"
             :value="c2.id"
@@ -35,7 +35,7 @@
           :disabled="scene == 0 ? false : true"
         >
           <el-option
-            v-for="(c3, index) in categoryStore.c3Arr"
+            v-for="c3 in categoryStore.c3Arr"
             :label="c3.name"
             :key="c3.id"
             :value="c3.id"
@@ -46,7 +46,7 @@
   </el-card>
 </template>
 <script setup lang="ts">
-import { onMounted, defineProps } from 'vue'
+import { onMounted } from 'vue'
 import useCategoryStore from '@/store/modules/category.ts'
 let categoryStore = useCategoryStore()
 

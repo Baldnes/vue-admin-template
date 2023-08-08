@@ -21,12 +21,12 @@
         prop="tmName"
       ></el-table-column>
       <el-table-column label="品牌LOGO" align="center">
-        <template #="{ row, $index }">
+        <template #="{ row }">
           <img :src="row.logoUrl" alt="" style="width: 100px; height: 100px" />
         </template>
       </el-table-column>
       <el-table-column label="品牌操作">
-        <template #="{ row, $index }">
+        <template #="{ row }">
           <el-button
             type="warning"
             size="small"
@@ -208,13 +208,13 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   }
 }
 const handleAvatarSuccess: UploadProps['onSuccess'] = (
-  response,
-  uploadFile,
+  response
 ) => {
   trademarkParmas.logoUrl = response.data
   formRef.value.clearValidate('logoUrl')
 }
 //表单校验
+// @ts-ignore
 const validatorTmName = (rule: any, value: any, callBack: any) => {
   if (value.trim().length >= 2) {
     callBack()
@@ -223,6 +223,7 @@ const validatorTmName = (rule: any, value: any, callBack: any) => {
   }
 }
 //品牌LOGO图片的自定义校验规则方法
+// @ts-ignore
 const validatorLogoUrl = (rule: any, value: any, callBack: any) => {
   //如果图片上传
   if (value) {

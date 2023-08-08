@@ -31,6 +31,7 @@ const goHome = () => {
 }
 //组件挂载完毕更新当前的事件
 onMounted(() => {
+  // @ts-ignore
   timer.value = setInterval(() => {
     time.value = moment().format('YYYY年MM月DD日 hh:mm:ss')
   }, 1000)

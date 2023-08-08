@@ -95,6 +95,7 @@ const login = async () => {
   }
 }
 //自定义校验规则
+ // @ts-ignore
 const validatorUserName = (rule: any, value: any, callback: any) => {
   if (/^[a-zA-Z0-9]{5,10}$/.test(value)) {
     callback()
@@ -102,7 +103,7 @@ const validatorUserName = (rule: any, value: any, callback: any) => {
     callback(new Error('用户名只能是5-10位字母和数字的组合'))
   }
 }
-
+// @ts-ignore
 const validatorPassword = (rule: any, value: any, callback: any) => {
   if (/^[a-zA-Z0-9!@#$%^&*()-_=+]{5,10}$/.test(value)) {
     callback()

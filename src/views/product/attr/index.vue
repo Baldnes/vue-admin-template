@@ -28,10 +28,10 @@
             prop="attrName"
           ></el-table-column>
           <el-table-column label="属性值名称">
-            <template #="{ row, $index }">
+            <template #="{ row }">
               <el-tag
                 type="success"
-                v-for="(item, index) in row.attrValueList"
+                v-for="item in row.attrValueList"
                 :key="item.id"
                 style="margin: 5px"
               >
@@ -40,7 +40,7 @@
             </template>
           </el-table-column>
           <el-table-column label="操作" width="150px">
-            <template #="{ row, $index }">
+            <template #="{ row }">
               <el-button
                 type="warning"
                 size="small"
@@ -110,12 +110,12 @@
             </template>
           </el-table-column>
           <el-table-column label="操作">
-            <template #="{ row, index }">
+            <template #="{ $index }">
               <el-button
                 type="warning"
                 size="small"
                 icon="Delete"
-                @click="attrParams.attrValueList.splice(index, 1)"
+                @click="attrParams.attrValueList.splice($index, 1)"
               ></el-button>
             </template>
           </el-table-column>
@@ -140,9 +140,7 @@ import category from '@/components/Category/index.vue'
 import useCategoryStore from '@/store/modules/category.ts'
 import {
   nextTick,
-  onBeforeMount,
   onBeforeUnmount,
-  onMounted,
   reactive,
   ref,
   watch,
@@ -256,7 +254,9 @@ const toLook = (row: AttrValue, index: number) => {
   }
   let repeat = attrParams.attrValueList.find((item) => {
     //切记把当前失却焦点属性值对象从当前数组扣除判断
+    // @ts-ignore
     if (item != row) {
+      // @ts-ignore
       return item.valueName === row.valueName
     }
   })

@@ -1,6 +1,6 @@
 <template>
   <el-icon style="margin-right: 10px" @click="changeIcon">
-    <component :is="fold ? 'Expand' : 'Fold'"></component>
+    <component :is="LayOutSettingStore.fold ? 'Expand' : 'Fold'"></component>
   </el-icon>
   <el-breadcrumb separator-icon="ArrowRight">
     <el-breadcrumb-item
