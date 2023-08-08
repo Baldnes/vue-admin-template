@@ -30,7 +30,7 @@
   <el-dropdown>
     <span class="el-dropdown-link">
       <span>{{ userStore.username }}</span>
-      <el-icon class="el-icon--right">
+      <el-icon class="el-icon--right" style="position: relative;top: 2px;">
         <arrow-down />
       </el-icon>
     </span>
@@ -64,9 +64,9 @@ const fullScreen = () => {
   }
 }
 //退出登陆
-const logout = () => {
+const logout = async () => {
   //清空仓库关于用户的信息
-  userStore.userLogout()
+  await userStore.userLogout()
   $router.push({
     path: '/login',
     query: { redirect: $route.path },
