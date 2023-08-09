@@ -1,8 +1,20 @@
 <template>
-  <el-button type="primary" size="small" circle color="white" @click="sendGitee">
+  <el-button
+    type="primary"
+    size="small"
+    circle
+    color="white"
+    @click="sendGitee"
+  >
     <svg-icon name="gitee"></svg-icon>
   </el-button>
-  <el-button type="primary" size="small" circle color="white" @click="sendGithub">
+  <el-button
+    type="primary"
+    size="small"
+    circle
+    color="white"
+    @click="sendGithub"
+  >
     <svg-icon name="github"></svg-icon>
   </el-button>
   <el-button
