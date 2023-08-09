@@ -98,9 +98,9 @@ const login = async () => {
 // @ts-ignore
 const validatorUserName = (rule: any, value: any, callback: any) => {
   if (value.length >= 5) {
-    callback();
+    callback()
   } else {
-    callback(new Error('账号长度至少五位'));
+    callback(new Error('账号长度至少五位'))
   }
 }
 // @ts-ignore
