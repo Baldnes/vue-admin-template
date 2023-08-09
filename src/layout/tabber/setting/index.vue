@@ -1,5 +1,14 @@
 <template>
   <el-button
+      type="primary"
+      size="small"
+      circle
+      color="white"
+      @click="send"
+  >
+    <svg-icon name="github"></svg-icon>
+  </el-button>
+  <el-button
     type="primary"
     size="small"
     icon="Refresh"
@@ -71,6 +80,9 @@ const logout = async () => {
     path: '/login',
     query: { redirect: $route.path },
   })
+}
+const send = () => {
+  window.open('https://gitee.com/wang_-chunyang/vue-admin-template', '_blank')
 }
 </script>
 
