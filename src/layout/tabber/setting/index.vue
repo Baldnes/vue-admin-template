@@ -1,5 +1,8 @@
 <template>
-  <el-button type="primary" size="small" circle color="white" @click="send">
+  <el-button type="primary" size="small" circle color="white" @click="sendGitee">
+    <svg-icon name="gitee"></svg-icon>
+  </el-button>
+  <el-button type="primary" size="small" circle color="white" @click="sendGithub">
     <svg-icon name="github"></svg-icon>
   </el-button>
   <el-button
@@ -75,8 +78,11 @@ const logout = async () => {
     query: { redirect: $route.path },
   })
 }
-const send = () => {
+const sendGitee = () => {
   window.open('https://gitee.com/wang_-chunyang/vue-admin-template', '_blank')
+}
+const sendGithub = () => {
+  alert('正在上传中')
 }
 </script>
 
