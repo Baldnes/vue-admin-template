@@ -1,7 +1,13 @@
 <template>
   <el-card class="box-card">
     <!--    添加按钮-->
-    <el-button type="success" size="default" icon="Plus" @click="addTrademark" v-has="`btn.Trademark.add`">
+    <el-button
+      type="success"
+      size="default"
+      icon="Plus"
+      @click="addTrademark"
+      v-has="`btn.Trademark.add`"
+    >
       添加品牌
     </el-button>
     <span style="color: #8c939d; font-size: 10px; margin-left: 10px">

@@ -6,7 +6,7 @@ export interface UserStore {
   menuRoutes: RouteRecordRaw[]
   username: string
   avatar: string
-  buttons:string[]
+  buttons: string[]
 }
 
 export interface setting {

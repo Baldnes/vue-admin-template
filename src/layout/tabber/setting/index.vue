@@ -34,12 +34,12 @@
     @click="fullScreen"
   ></el-button>
   <el-button
-      type="primary"
-      size="small"
-      icon="MoonNight"
-      circle
-      color="white"
-      @click="handleChangeDark"
+    type="primary"
+    size="small"
+    icon="MoonNight"
+    circle
+    color="white"
+    @click="handleChangeDark"
   ></el-button>
   <img
     :src="userStore.avatar"
@@ -95,14 +95,15 @@ const logout = async () => {
   await userStore.userLogout()
   $router.push({
     path: '/login',
-    query: {redirect: $route.path},
+    query: { redirect: $route.path },
   })
 }
 const sendGitee = () => {
   window.open('https://gitee.com/wang_-chunyang/vue-admin-template', '_blank')
 }
 const sendGithub = () => {
-  alert('正在上传中')
+
+      window.open('https://github.com/Baldnes/vue-admin-template', '_blank')
 }
 </script>
 

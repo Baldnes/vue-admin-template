@@ -13,7 +13,7 @@ import '@/styles/index.scss'
 import router from '@/router/index.ts'
 import pinia from './store'
 import './permisstion'
-import {isHasButton} from '@/directive/has.ts'
+import { isHasButton } from '@/directive/has.ts'
 const app = createApp(App)
 //国际话配置
 app.use(ElementPlus, {
