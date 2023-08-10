@@ -41,21 +41,21 @@
       <el-table-column label="操作" width="250px" fixed="right">
         <template #="{ row }">
           <el-button
-            type="primary"
+            type="success"
             size="small"
             :icon="row.isSale == 1 ? 'Bottom' : 'Top'"
             @click="updateSale(row)"
           ></el-button>
           <el-button
-            type="primary"
+            type="warning"
             size="small"
             icon="Edit"
             @click="updateSku"
           ></el-button>
           <el-button
-            type="primary"
+            type="success"
             size="small"
-            icon="InfoFilled"
+            icon="View"
             @click="findSku(row)"
           ></el-button>
           <el-popconfirm
@@ -64,7 +64,7 @@
             @confirm="removeSku(row.id)"
           >
             <template #reference>
-              <el-button type="primary" size="small" icon="Delete"></el-button>
+              <el-button type="danger" size="small" icon="Delete"></el-button>
             </template>
           </el-popconfirm>
         </template>

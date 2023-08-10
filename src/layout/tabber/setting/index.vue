@@ -34,11 +34,12 @@
     @click="fullScreen"
   ></el-button>
   <el-button
-    type="primary"
-    size="small"
-    icon="Setting"
-    circle
-    color="white"
+      type="primary"
+      size="small"
+      icon="MoonNight"
+      circle
+      color="white"
+      @click="handleChangeDark"
   ></el-button>
   <img
     :src="userStore.avatar"
@@ -63,7 +64,14 @@
 import useLayOutSettingStore from '@/store/modules/setting.ts'
 import useUserStore from '@/store/modules/user.ts'
 import { useRoute, useRouter } from 'vue-router'
-
+import { useDark, useToggle } from '@vueuse/core'
+// 切换
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+// 切换
+const handleChangeDark = () => {
+  toggleDark()
+}
 let userStore = useUserStore()
 let LayOutSettingStore = useLayOutSettingStore()
 let $router = useRouter()
@@ -87,7 +95,7 @@ const logout = async () => {
   await userStore.userLogout()
   $router.push({
     path: '/login',
-    query: { redirect: $route.path },
+    query: {redirect: $route.path},
   })
 }
 const sendGitee = () => {

@@ -18,7 +18,7 @@
     </el-form>
   </el-card>
   <el-card style="margin: 10px 0">
-    <el-button type="success" size="default" @click="addUser">
+    <el-button type="success" size="default" @click="addUser" v-has="`btn.User.add`">
       添加用户
     </el-button>
     <el-button type="danger" size="default" @click="deleteSelectUser">
