@@ -102,8 +102,7 @@ const sendGitee = () => {
   window.open('https://gitee.com/wang_-chunyang/vue-admin-template', '_blank')
 }
 const sendGithub = () => {
-
-      window.open('https://github.com/Baldnes/vue-admin-template', '_blank')
+  window.open('https://github.com/Baldnes/vue-admin-template', '_blank')
 }
 </script>
 
