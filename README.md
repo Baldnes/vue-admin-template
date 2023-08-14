@@ -1,7 +1,14 @@
+体验地址
+
+```
+http://124.70.70.155
+```
+
+
 #克隆项目
 
 ```
-git clone https://github.com/Baldnes/vue-admin-template.git
+git clone https://gitee.com/wang_-chunyang/vue-admin-template.git
 ```
 
 #安装依赖
